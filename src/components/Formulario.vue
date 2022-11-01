@@ -1,0 +1,54 @@
+<template>
+  <div class="box">
+    <div class="columns">
+      <div class="columns is-8" role="form" aria-label="Formulário para criação de nova tarefa">
+        <input
+            type="text"
+            class="input"
+            placeholder="Qual tarefa você deseja iniciar?"
+        />
+      </div>
+      <div class="columns">
+        <div class="is-flex is-align-items-center is-justify-content-space-between">
+          <section>
+            <strong>00:00:00</strong>
+          </section>
+          <button class="button">
+            <span class="icon">
+              <i class="fas fa-play"></i>
+            </span>
+            <span>play</span>
+          </button>
+          <button class="button">
+            <span class="icon">
+              <i class="fas fa-stop"></i>
+            </span>
+            <span>stop</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  // eslint-disable-next-line vue/multi-word-component-names
+  name: "Formulation"
+}
+</script>
+
+<style scoped>
+header {
+  padding: 1rem;
+  background: #0d3b66;
+  width: 100%;
+  height: 100vh;
+}
+@media only screen and (max-width: 768px) {
+  header {
+    padding: 2.5rem;
+    height: auto;
+  }
+}
+</style>
