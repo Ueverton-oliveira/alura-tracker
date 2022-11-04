@@ -13,13 +13,13 @@
           <section>
             <strong>00:00:00</strong>
           </section>
-          <button class="button">
+          <button class="button" @click="iniciar">
             <span class="icon">
               <i class="fas fa-play"></i>
             </span>
             <span>play</span>
           </button>
-          <button class="button">
+          <button class="button" @click="finalizar">
             <span class="icon">
               <i class="fas fa-stop"></i>
             </span>
@@ -31,11 +31,24 @@
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Formulation"
-}
+  name: "Formulation",
+  data () {
+    return
+  },
+  methods: {
+    iniciar () {
+      console.log('iniciando');
+    },
+    finalizar () {
+      console.log('finalizando');
+    }
+  }
+});
 </script>
 
 <style scoped>
