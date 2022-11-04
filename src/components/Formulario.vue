@@ -11,7 +11,9 @@
       <div class="columns">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
           <section>
-            <strong>00:00:00</strong>
+            <strong>
+              {{ tempoEmSegundos }}
+            </strong>
           </section>
           <button class="button" @click="iniciar">
             <span class="icon">
@@ -38,11 +40,18 @@ export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Formulation",
   data () {
-    return
+    return {
+      tempoEmSegundos: 0
+    }
+  },
+  computed: {
+
   },
   methods: {
     iniciar () {
-      console.log('iniciando');
+      setInterval(() => {
+        this.tempoEmSegundos += 1
+      }, 1000)
     },
     finalizar () {
       console.log('finalizando');
