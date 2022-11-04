@@ -12,7 +12,7 @@
         <div class="is-flex is-align-items-center is-justify-content-space-between">
           <section>
             <strong>
-              {{ tempoEmSegundos }}
+              {{ tempoDeCorrido }}
             </strong>
           </section>
           <button class="button" @click="iniciar">
@@ -45,7 +45,9 @@ export default defineComponent({
     }
   },
   computed: {
-
+    tempoDeCorrido () : string {
+      return new Date(this.tempoEmSegundos * 1000).toISOString().substring(11,8)
+    }
   },
   methods: {
     iniciar () {
@@ -59,18 +61,3 @@ export default defineComponent({
   }
 });
 </script>
-
-<style scoped>
-header {
-  padding: 1rem;
-  background: #0d3b66;
-  width: 100%;
-  height: 100vh;
-}
-@media only screen and (max-width: 768px) {
-  header {
-    padding: 2.5rem;
-    height: auto;
-  }
-}
-</style>

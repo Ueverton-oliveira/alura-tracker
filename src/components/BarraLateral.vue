@@ -9,9 +9,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-export default {
+export default defineComponent({
   name: "BarraLateral"
-}
+});
 </script>
 
 <style scoped>
