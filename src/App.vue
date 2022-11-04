@@ -2,7 +2,6 @@
   <main class="columns is-gapless is-multiline">
     <div class="column is-one-quarter">
       <BarraLateral />
-
     </div>
     <div class="column is-three-quarter">
       <Formulario />
@@ -22,6 +21,3 @@ export default defineComponent({
 });
 </script>
 
-<style>
-
-</style>
