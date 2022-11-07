@@ -10,23 +10,30 @@
       </div>
       <div class="columns">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
-          <section>
-            <strong>
-              {{ tempoDeCorrido }}
-            </strong>
-          </section>
-          <button class="button" @click="iniciar">
+          <div>
+            <section>
+              <strong>
+                {{ tempoDeCorrido }}
+              </strong>
+            </section>
+          </div>
+
+          <div class="iniciar">
+            <button class="button" @click="iniciar">
             <span class="icon">
               <i class="fas fa-play"></i>
             </span>
-            <span>play</span>
-          </button>
-          <button class="button" @click="finalizar">
+              <span>play</span>
+            </button>
+          </div>
+          <div class="finalizar">
+            <button class="button" @click="finalizar">
             <span class="icon">
               <i class="fas fa-stop"></i>
             </span>
-            <span>stop</span>
-          </button>
+              <span>stop</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -41,7 +48,8 @@ export default defineComponent({
   name: "Formulation",
   data () {
     return {
-      tempoEmSegundos: 0
+      tempoEmSegundos: 0,
+      cronometro: 0
     }
   },
   computed: {
@@ -51,13 +59,20 @@ export default defineComponent({
   },
   methods: {
     iniciar () {
-      setInterval(() => {
+      this.cronometro =  setInterval(() => {
         this.tempoEmSegundos += 1
       }, 1000)
     },
     finalizar () {
-      console.log('finalizando');
+      clearInterval(this.cronometro)
     }
   }
 });
 </script>
+
+<style scoped>
+.iniciar {
+  position: relative;
+  right: 20px;
+}
+</style>
