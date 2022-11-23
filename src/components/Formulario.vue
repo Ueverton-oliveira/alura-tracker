@@ -11,7 +11,7 @@
       <div class="columns">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
           <div>
-           <Cronometro  />
+           <Cronometro :tempoEmSegundos="tempoEmSegundos" />
           </div>
 
           <div class="iniciar">
