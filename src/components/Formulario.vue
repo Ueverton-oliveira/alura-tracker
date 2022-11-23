@@ -11,11 +11,7 @@
       <div class="columns">
         <div class="is-flex is-align-items-center is-justify-content-space-between">
           <div>
-            <section>
-              <strong>
-                {{ tempoDeCorrido }}
-              </strong>
-            </section>
+           <Cronometro  />
           </div>
 
           <div class="iniciar">
@@ -42,19 +38,18 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import Cronometro from "@/components/Cronometro.vue";
 
 export default defineComponent({
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Formulation",
+  components: {
+    Cronometro
+  },
   data () {
     return {
       tempoEmSegundos: 0,
       cronometro: 0
-    }
-  },
-  computed: {
-    tempoDeCorrido () : string {
-      return new Date(this.tempoEmSegundos * 1000).toISOString().substring(11,8)
     }
   },
   methods: {
