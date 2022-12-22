@@ -15,6 +15,7 @@ export default defineComponet ({
       type: Number,
       default: 0
 
+
     }
   },
   computed: {
