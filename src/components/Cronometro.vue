@@ -14,6 +14,7 @@ export default defineComponet ({
     tempoEmSegundos: {
       type: Number,
       default: 0
+
     }
   },
   computed: {
