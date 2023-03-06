@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style scoped>
+
 .iniciar {
   position: relative;
   right: 20px;
