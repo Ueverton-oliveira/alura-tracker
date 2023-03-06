@@ -32,6 +32,7 @@ export default {
   },
   methods: {
     finalizarTarefa (tempoDecorrido: number) :void {
+
       console.log('tempo da tarefa', tempoDecorrido)
       console.log('descriçaõ da tarefa', this.descricao)
       this.descricao = ''
@@ -43,6 +44,7 @@ export default {
 </script>
 
 <style scoped>
+
 .iniciar {
   position: relative;
   right: 20px;
