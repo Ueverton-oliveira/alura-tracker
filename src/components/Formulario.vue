@@ -35,6 +35,7 @@ export default {
 
       console.log('descriçaõ da tarefa', this.descricao)
       this.descricao = ''
+
     }
   }
 }
