@@ -32,7 +32,6 @@ export default {
   },
   methods: {
     finalizarTarefa (tempoDecorrido: number) :void {
-
       console.log('descriçaõ da tarefa', this.descricao)
       this.descricao = ''
     }
